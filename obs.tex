@@ -1,0 +1,59 @@
+- criando o projeto --> npx create-expo-app --template
+
+- iniciando o projeto --> npx expo start
+
+- mapeamento de importações, --> npm install --save-dev babel-plugin-module-resolver
+- configuração "babel.config.js e tsconfig.json"
+
+- instalação 'styled components e suas typagems"
+- npm i styled-components
+- npm i --save-dev @types/styled-components
+- npm i --save-dev @types/styled-components-react-native
+
+- definição do thema da aplicação "theme/index.ts
+- configuração do thema no app da aplicação usando o 'themeProvider do styled components'
+- definição das typagems para usar o thema na aplicação '@types/styled.d.ts'
+
+- instalação das fontes"
+- npm i expo-font
+- npm i @expo-google-fonts/roboto 
+- importa no app -> import {useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto'
+- configuraçao do estado que carrega as fontes configuradas const [fontsLoaded] = useFonts([ Roboto_400Regular, Roboto_700Bold]);
+
+- Header
+- definição das typagems para usar imagens na aplicação '@types/png.d.ts'.
+
+- usando icones na aplicação "phosphor-react-native"
+- npm i --save phosphor-react-native
+- npm i react-native-svg
+
+
+- resolvedo conflito de typescript
+- define a configuraçao no package.json
+- "overrides": {
+    "@types/react": "~18.2.14",
+    },
+    - salva, exclua a pasta node modules, e instala o projeto de novo "npm install"
+    
+- Navegação
+- Stack Navigator  "Cora da aplicação" -> npm install @react-navigation/native
+- dependencias que precisa lidar com a parte da navegação e suguras da aplicação -> npx expo install react-native-screens react-native-safe-area-context
+- extrategia de naveção que será utilizada -> npm install @react-navigation/native-stack
+
+- Tipagem para navegação
+- @types/navigation.ds
+
+- SafeAreaView
+- cuida do container da View na aplicação
+- export const Container = styled(SafeAreaView)``;
+
+-AsyncStorange - Local Storange "Armazenamento no dispositivo"
+- npm i @react-native-async-storage/async-storage
+
+-UseFocusEffect - redenrizar a chamada API, para funcionar necessita usar o UseCallback
+- useFocusEffect(useCallback(() => {
+    console.log('useFocusEffect Execultou')
+    fetchGroups();
+  },[]));
+
+
